@@ -22,7 +22,7 @@
 
 			<div class="rounded bg-white max-w-md rounded overflow-hidden shadow-xl p-5">
 
-				<form class="space-y-4" action="#" method="POST">
+				<form class="space-y-4" action="../../modele/connexions/cand_connexion.php" method="POST">
 					<input type="hidden" name="remember" value="True">
 					<div class="rounded-md shadow-sm -space-y-px">
 						<div class="grid gap-6">
@@ -43,12 +43,12 @@
 
                             <div class="col-span-12">
                                                                 
-                                <label for="groupe" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Groupe</label>
-                                <select id="groupe" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                                <option>Groupe 1</option>
-                                <option>Groupe 2</option>
-                                <option>Groupe 3</option>
-                                <option>Groupe 4</option>
+                                <label for="id_groupe" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Groupe</label>
+                                <select id="id_groupe" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                <option> 1</option>
+                                <option> 2</option>
+                                <option> 3</option>
+                                <option> 4</option>
                                 </select>
 
 							</div>
