@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/@themesberg/flowbite@1.3.0/dist/flowbite.min.css" />
+	<script src="https://cdn.tailwindcss.com"></script>
+
     <title>ESGIS-ELECTION</title>
 </head>
 <body>
@@ -68,7 +70,7 @@
 								<input type="text" name="note" id="note" autocomplete="note" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
 							</div>
 
-							<div class="col-span-12">
+							<div class="col-span-12  ">
 								<label for="email_address" class="block text-sm font-medium text-gray-700">Adresse Email</label>
 								<input type="text" name="email_address" id="email_address" autocomplete="email" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
 							</div>
