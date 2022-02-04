@@ -1,9 +1,14 @@
-<?php  
+<?php
+   session_start();  
+?>
+<?php 
 
 include_once '../../modele/function-php/bdd.php';
 
 
 $error = null;
+
+// REGISTER PART
 
 if(isset($_REQUEST['submit']) ){
     
@@ -66,7 +71,7 @@ if(isset($_REQUEST['submit']) ){
 
                                                     if($insert->rowCount()== 1){
 
-                                                        header('Location: ../../vue/public/inscription.php?success = inscription reussir avec succès');
+                                                        header('Location: ../../vue/public/inscription.php');
                                                         
                                                     }else{
                                                         header("Location: ../../vue/public/inscription.php?error= ERREUR D'INSCRIPTION!!!");
@@ -124,6 +129,40 @@ if(isset($_REQUEST['submit']) ){
 
 }
 
+
+
+  // LOGIN PART BEFORE VOTE
+
+  if(isset($_REQUEST['submit']))
+  {
+      $sql = "SELECT * FROM etudiant WHERE email = :email AND pwd = :pwd";
+      $select = $bdd->prepare($sql);
+      $select->execute (array(
+          "email" => $_POST['email'],
+          "pwd" => $_POST['pwd']
+                
+      ));
+      $tableau =$select->fetch() ;
+      print_r($tableau);
+
+      // SI LES DONNEES EXISTENT DANS LE TABLEAU DIFFERENT DE NULL
+      
+      if(is_array($tableau) && count($tableau)!=0)
+
+      
+      {
+
+    // stocker ces différentes données pour chaque utilisateur en utilisant un identifiant de session unique
+           $_SESSION['id'] = $tableau['id'];
+           $_SESSION['email'] = $tableau['email'];
+           $_SESSION['create_at'] = $tableau['create_at'];
+           
+           header('Location: ../../vue/vote.php');  
+      }
+      else{
+        header("Location: ../../vue/public/connect_vote.php?error= ERREUR UTILISATEUR INTROUVABLE!!!");
+    }       
+  }
 
 ?> 
 

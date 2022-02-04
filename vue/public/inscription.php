@@ -1,6 +1,4 @@
-<?php  /* require_once ("../../modele/function-php/bdd.php"); */
-include '../../modele/inscription/register.php' ; 
-?>
+<?php include '../../modele/inscription/register.php' ; ?>
 <!DOCTYPE html>
 <html lang="en">
  
@@ -12,7 +10,7 @@ include '../../modele/inscription/register.php' ;
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css	"/>
   <link rel="stylesheet" href="https://unpkg.com/@themesberg/flowbite@1.3.0/dist/flowbite.min.css" />
  
-  <title>Transparent form</title>
+  <title>INSCRIPTION</title>
 </head>
  
 <body>
@@ -97,12 +95,12 @@ include '../../modele/inscription/register.php' ;
                                     <input type="password" name="pwd" id="pwd" class="form-control" placeholder="MOT DE PASSE *" value="" >
                                 </div>
 
-                                    <!--PWD ETUDIANTS -->
+                                    <!--PWDCONFIRM ETUDIANTS -->
                                     <div class="form-group">
                                     <input type="password" name="pwdconfirm" id="pwdconfirm" class="form-control" placeholder="CONFIRMER MOT DE PASSE *" value="" >
                                 </div>
                                 <div class="text" class="form-group">
-						          <input type="submit" id="submit"  name="submit" value="REGISTER" class="btnRegister">
+						          <input type="submit" id="submit"  name="submit" value="INSCRPTION" class="btnRegister">
 					            </div>
                                
                             </div>
